@@ -9,7 +9,7 @@ function App() {
   return (
   <>
     <div>
-      <h1>NotePad</h1>
+      <h1>padNote</h1>
     </div>
   </>
   )
