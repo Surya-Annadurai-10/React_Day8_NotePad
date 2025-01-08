@@ -1,7 +1,9 @@
 import { useState } from 'react'
-import styles from './left.module.css'
+import styles from './LeftSide.module.css'
 import { IoIosAddCircle } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
+
+
 const Left =({input , setInput,notesData , setNotesData}) =>{
 
 const handleAdd = () =>{
@@ -75,4 +77,4 @@ const handleEdit = (idx) =>{
     )
 }
 
-export default Left
+export default Left;

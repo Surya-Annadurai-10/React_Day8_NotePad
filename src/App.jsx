@@ -2,9 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import styles from './App.module.css'
-import Left from './left/left'
-import Right from './right/Right'
-
+import Right from './Right/Right'
+import Left from './Left/LeftSide'
 
 
 function App() {
