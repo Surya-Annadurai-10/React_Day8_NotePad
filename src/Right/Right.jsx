@@ -20,8 +20,8 @@ return (
     <>
     <div className={styles.right_con}>
     <div className={styles.top}>
-        <button onClick={() => setPreview(false)}>Write</button>
-        <button onClick={() => setPreview(true)}>Preview</button>
+        <button className={styles.write} onClick={() => setPreview(false)}>Write</button>
+        <button className={styles.preview} onClick={() => setPreview(true)}>Preview</button>
        <div>
        <button>H</button>
         <button className={styles.bold}>B</button>
