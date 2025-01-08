@@ -11,32 +11,21 @@ const handleAdd = () =>{
     ...notesData,
     input
    ])
-  
    setInput("# Enter title here")
 }
 
 const handleDelete = (idx) =>{
    console.log("delete");
    const notesDataCopy = [...notesData];
-
     notesDataCopy.splice(idx , 1)
     setNotesData(notesDataCopy)
 }
 
 const handleEdit = (idx) =>{
-   // setNotesData([
-   //    ...notesData,
-   //    input
-   //   ])
-
    console.log(input);
-   
-    
     console.log(idx);
     setInput(notesData[idx]);
-
     const notesDataCopy = [...notesData , input];
-
     notesDataCopy.splice(idx , 1)
     setNotesData(notesDataCopy)
 }

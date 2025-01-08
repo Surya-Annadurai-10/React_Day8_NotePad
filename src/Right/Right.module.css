@@ -52,8 +52,9 @@
 .textarea{
     width: 100%;
     height: 90vh;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     padding: 1rem;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .write,.preview{
@@ -67,6 +68,12 @@
 .write:hover,.preview:hover{
     background-color: black;
     color: wheat;
+}
+
+.write:active{
+    background-color: black;
+    color: wheat;
+    
 }
 
 
