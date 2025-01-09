@@ -12,18 +12,38 @@ function App() {
   ])
 
   const [input , setInput] = useState("# Enter title here");
- 
+  const [homePage, setHomePage] = useState(false);  
+
+const handleHomePage = () =>{
+  setHomePage(false);
+  setNotesData([...notesData,
+     "# Enter title here"
+  ])
   
+}
+
+
+
 
   return (
   <>
-    <div className={styles.container}>
-     <Left notesData={notesData} setNotesData={setNotesData} input={input} setInput={setInput} />
+
+ 
+    {
+      homePage ?  <div  className={styles.box}>
+      <div className={styles.inner}>
+         <h1>You have no notes</h1>
+         <button onClick={handleHomePage} className={styles.button}>Create one now</button>
+      </div>
+    </div>  : 
+      <div className={styles.container}>
+     <Left setHomePage={setHomePage} homePage={homePage} notesData={notesData} setNotesData={setNotesData} input={input} setInput={setInput} />
 
      <Right notesData={notesData} setNotesData={setNotesData}  input={input} setInput={setInput}/>
   
     
     </div>
+    }
   </>
   )
 }

@@ -9,8 +9,7 @@ import { FaListCheck } from "react-icons/fa6";
 import { useRef, useState } from 'react';
 import  ReactMarkdown from 'react-markdown'
 
-const Right = ({input , setInput}) =>{
-  const textArea = useRef(null);
+const Right = ({notesData , setNotesData ,input , setInput}) =>{
     const previewBtn = useRef(null);
     const writeBtn = useRef(null);
     const [preview , setPreview] = useState(false);
@@ -71,7 +70,6 @@ const Right = ({input , setInput}) =>{
        str.push(newStr);
        let resStr = str.join(" ");
        console.log(resStr);
-        textArea.select;
          return resStr
            
     }
@@ -94,6 +92,12 @@ const Right = ({input , setInput}) =>{
 
   const handleText = (e) =>{
     setInput(e.target.value)
+    let notesDataCopy = [...notesData];
+    notesDataCopy[0] = e.target.value; 
+    setNotesData(notesDataCopy);
+    console.log(notesDataCopy);
+    
+    
   }
 return (
     <>
@@ -122,7 +126,7 @@ return (
        <div className={styles.down}>
        {
         preview ? <div className={styles.markdown}> <ReactMarkdown>{input}</ReactMarkdown></div> :
-       <div><textarea ref={textArea } className={styles.textarea} name="" onChange={(e) => handleText(e)}  value={input} ></textarea></div>
+       <div><textarea  className={styles.textarea} name="" onChange={(e) => handleText(e)}  value={input} ></textarea></div>
        }
         
        </div>
